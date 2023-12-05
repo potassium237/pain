@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class player_movement : MonoBehaviour
 {
-    public Vector2 speed = new Vector2(10, 10);
+    public float speed = 10f;
     // Start is called before the first frame update
     void Start()
     {}
@@ -13,8 +13,8 @@ public class player_movement : MonoBehaviour
     void Update()
     {float inputX = Input.GetAxis("Horizontal");
      float inputY = Input.GetAxis("Vertical");
-
-     Vector3 movement = new Vector3(speed.x * inputX, speed.y * inputY, 0);
+     
+     Vector3 movement = new Vector3(speed * inputX, speed * inputY, 0);
 
      movement *= Time.deltaTime;
 
